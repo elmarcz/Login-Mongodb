@@ -1,9 +1,8 @@
 <p align="center">
   <a href="https://elmarcz.github.io/Login" target="blank"><img src="Src/Logo.png" width="160" alt="Dot Logo" /></a>
-  <h1 align="center" href="https://elmarcz.github.io/Login">Login With Mysql</h1>
+  <h1 align="center" href="https://elmarcz.github.io/Login">Login With Mongodb</h1>
 </p>
 <p align="center">A complete Login and Register page using a Mongodb Database</p>
-<h3 align="center">🔨 Built with ⚙️</h3>
 
 <p align="center">
    <img src='https://raw.githubusercontent.com/sammwyy/sammwyy/master/skills/html.png' height='50px'/>
@@ -18,8 +17,8 @@ A login with Frontend, Backend and Database
 
 ### 📋 Features
 
-- [x] Frontend
-- [ ] Backend
+- [ ] Frontend
+- [x] Backend
 - [ ] Database
 
 ## 📱 Website link
