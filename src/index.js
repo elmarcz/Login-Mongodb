@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
-const exphbs = require('express-handlebars')
+const exphbs = require('express-handlebars');
+const methodOverride = require("method-override");
+const session = require("express-session");
 
 // Inicializations
 const app = express();
@@ -14,9 +16,17 @@ app.engine(".hbs", exphbs({
     partialsDir: path.join(app.get("views"), 'partials'),
     extname: ".hbs"
 }));
-app.set("view engine", ".hbs")
+app.set("view engine", ".hbs");
 
 // Midlewares
+app.use(express.urlencoded({extended: false}));
+app.use(methodOverride("_method"));
+app.use(session({
+    secret: "mysecretapp",
+    resave: true,
+    saveUninitialized: true
+}))
+
 
 // Global Variables
 
@@ -26,5 +36,5 @@ app.set("view engine", ".hbs")
 
 // Server is listening
 app.listen(app.get("port"), () => {
-    console.log("listening on port " + app.get("port"))
+    console.log("listening on port " + app.get("port"));
 })
